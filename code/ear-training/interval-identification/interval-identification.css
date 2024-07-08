@@ -1,0 +1,45 @@
+body {
+    background-color: #ffffff;
+    display: grid;
+    place-items: center;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+#title {
+    font-size: 2rem;
+}
+
+#play_controls_container {
+    display: grid;
+    place-items: center;
+    padding-bottom: 10px;
+}
+
+#results_display_container {
+    padding-bottom: 10px;
+    font-size: 1rem;
+}
+
+.audio-playing-control-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 5px;
+    border-right: 5px;
+    background-color: #eb9320;
+    border: 2px solid #3f3f3f;
+    border-radius: 5px;
+}
+
+.interval-guess-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 5px;
+    border-right: 5px;
+    background-color: #44bae9;
+    border: 2px solid #3f3f3f;
+    border-radius: 5px;
+}
+
+#end_quiz_container {
+    padding-top: 10px;
+}
