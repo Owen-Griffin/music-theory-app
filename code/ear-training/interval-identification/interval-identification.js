@@ -16,16 +16,16 @@ var intervalSemitones = {'-2': 1,
                         'P8': 12}
 
 var currentInterval
-var guess
+var guess = 'placeholder'
 
-function initaliseNoteSounds() {
-    var i = 0
-    while(i<35) {
-    noteSounds.push(new Audio(`....\\assets\\piano-note-sounds\\${noteSoundPaths[i]}`))
-    console.log(`....\\assets\\piano-note-sounds\\${noteSoundPaths[i]}`)
-    i++
+function initalizeNoteSounds() {
+    var i = 0;
+    while (i < noteSoundPaths.length) {
+        noteSounds.push(new Audio(`piano-notes-sounds/${noteSoundPaths[i]}`));
+        i++;
     }
 };
+
 
 function choseInterval() {
     var interval = intervalOptions[Math.floor(Math.random()*intervalOptions.length)]
@@ -40,12 +40,12 @@ function choseInterval() {
 function playNote(index) {
     console.log('playing')
     noteSounds[index].play()
-}
+};
 
 function submitGuess(submittedGuess) {
     console.log(`Guess: ${guess}`)
     guess = submittedGuess
-}
+};
 
 function mainQuiz() {
     while(true) {
@@ -54,19 +54,17 @@ function mainQuiz() {
             console.log('Guess correct')
             results_text = document.getElementById("results_text")
             results_text.textContent = 'Correct!'
-        }
+        };
 
-    }
-}
+    };
+};
 
 document.getElementById("play_interval_button").addEventListener("click", function() {
     playNote(currentInterval[1])
     playNote(currentInterval[2])
 });
 
-document.getElementsByClassName("interval-guess-button").addEventListener("click", function())
-
-
-initaliseNoteSounds()
+initalizeNoteSounds()
+mainQuiz()
 
 // audio.play();
